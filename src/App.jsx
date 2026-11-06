@@ -15,7 +15,6 @@ import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import QuoteModal from './components/QuoteModal';
 import LegalModals from './components/LegalModals';
-import ThemeSwitcher, { PALETTES } from './components/ThemeSwitcher';
 import { content } from './data/translations';
 import { Phone, MessageCircle } from 'lucide-react';
 
@@ -24,32 +23,6 @@ export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const [preselectedService, setPreselectedService] = useState('');
   const [activeLegalModal, setActiveLegalModal] = useState(null);
-
-  // Curated theme palette for live testing
-  const [currentPalette, setCurrentPalette] = useState(() => {
-    try {
-      const saved = localStorage.getItem('bx-theme-palette');
-      const found = PALETTES.find(p => p.id === saved);
-      return found || PALETTES[0]; // Default: Slate Petrol #1C3D3D
-    } catch (e) {
-      return PALETTES[0];
-    }
-  });
-
-  // Apply CSS variables dynamically whenever palette changes
-  useEffect(() => {
-    const root = document.documentElement;
-    root.style.setProperty('--c-hero-rgb', currentPalette.heroRgb);
-    root.style.setProperty('--c-deep-rgb', currentPalette.deepRgb);
-    root.style.setProperty('--c-dark-rgb', currentPalette.darkRgb);
-    root.style.setProperty('--c-night-rgb', currentPalette.nightRgb);
-    root.style.setProperty('--c-blue', currentPalette.heroHex);
-    try {
-      localStorage.setItem('bx-theme-palette', currentPalette.id);
-    } catch (e) {
-      // ignore
-    }
-  }, [currentPalette]);
 
   const t = content[lang];
 
@@ -147,8 +120,8 @@ export default function App() {
         onClose={() => setActiveLegalModal(null)}
       />
 
-      {/* Discreet Floating Fast Contact Pill on bottom-left */}
-      <div className="fixed bottom-6 left-6 z-40 flex items-center gap-2">
+      {/* Discreet Floating Fast Contact Pill on bottom-right */}
+      <div className="fixed bottom-6 right-6 z-40 flex items-center gap-2">
         <a
           href="https://wa.me/491741757400"
           target="_blank"
@@ -169,12 +142,6 @@ export default function App() {
           <span className="hidden sm:inline">+49 174 1757400</span>
         </a>
       </div>
-
-      {/* Floating Theme Switcher to test palettes live */}
-      <ThemeSwitcher
-        currentPalette={currentPalette}
-        onSelectPalette={setCurrentPalette}
-      />
     </div>
   );
 }
