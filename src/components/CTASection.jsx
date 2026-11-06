@@ -45,9 +45,9 @@ export default function CTASection({ data, onOpenQuote }) {
           <span>•</span>
           <span>Certified § 34a GewO</span>
           <span>•</span>
-          <a href="mailto:info@bx-sicherheit.de" className="hover:text-ink transition-colors flex items-center gap-1.5">
+          <a href="mailto:info@bx-sicherheit.com" className="hover:text-ink transition-colors flex items-center gap-1.5">
             <Mail className="w-3.5 h-3.5" />
-            info@bx-sicherheit.de
+            info@bx-sicherheit.com
           </a>
         </div>
       </div>

@@ -42,8 +42,8 @@ export default function LegalModals({ activeModal, onClose }) {
                 Kontakt
               </h3>
               <p>Telefon: <a href="tel:+491741757400" className="text-blue-hero hover:underline font-semibold">+49 174 1757400</a></p>
-              <p>E-Mail: <a href="mailto:info@bx-sicherheit.de" className="text-blue-hero hover:underline font-semibold">info@bx-sicherheit.de</a></p>
-              <p>Website: <a href="https://bx-sicherheit.de" target="_blank" rel="noopener noreferrer" className="text-blue-hero hover:underline">https://bx-sicherheit.de</a></p>
+              <p>E-Mail: <a href="mailto:info@bx-sicherheit.com" className="text-blue-hero hover:underline font-semibold">info@bx-sicherheit.com</a></p>
+              <p>Website: <a href="https://bx-sicherheit.com" target="_blank" rel="noopener noreferrer" className="text-blue-hero hover:underline">https://bx-sicherheit.com</a></p>
             </div>
 
             <div>
@@ -92,7 +92,7 @@ export default function LegalModals({ activeModal, onClose }) {
               <p className="text-ink font-semibold">BX Sicherheit & Service</p>
               <p>Amir Bajra</p>
               <p>Johann-Sebastian-Bach-Str. 3, 67112 Mutterstadt</p>
-              <p>E-Mail: info@bx-sicherheit.de</p>
+              <p>E-Mail: info@bx-sicherheit.com</p>
             </div>
 
             <div>

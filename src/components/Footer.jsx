@@ -73,8 +73,8 @@ export default function Footer({ data, lang, setLang, onOpenModal, onOpenQuote }
                 </a>
               </p>
               <p>
-                <a href="mailto:info@bx-sicherheit.de" className="hover:text-ink transition-colors">
-                  info@bx-sicherheit.de
+                <a href="mailto:info@bx-sicherheit.com" className="hover:text-ink transition-colors">
+                  info@bx-sicherheit.com
                 </a>
               </p>
               <p className="text-xs text-grey">
